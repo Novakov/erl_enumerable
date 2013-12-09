@@ -1,0 +1,9 @@
+{application,enumerable,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{enumerable,[]}},
+              {env,[]},
+              {modules,[enumerable,range_enumerable,static,take_enumerable,
+                        where_enumerable]}]}.
