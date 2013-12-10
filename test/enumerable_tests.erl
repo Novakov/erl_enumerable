@@ -45,3 +45,21 @@ where_test() ->
         R = enumerable:range(1, 10, 1),
         W = enumerable:where(R, fun(X) -> X rem 3 =:= 0 end),
         ?assertEqual([3,6,9], enumerable:to_list(W)).
+
+select_many_list_test() ->
+        R = enumerable:range(1,2,1),
+        SM = enumerable:select_many(R, fun(X) -> [X, X] end),
+        ?assertEqual([1,1,2,2], enumerable:to_list(SM)).
+
+select_many_enum_test() ->
+        R = enumerable:range(1,2,1),
+        SM = enumerable:select_many(R, fun(X) -> enumerable:range(1,2,1) end),
+        ?assertEqual([1,2,1,2], enumerable:to_list(SM)).
+
+count_test() ->
+        R = enumerable:range(1,2,1),
+        ?assertEqual(2, enumerable:count(R)).
+
+empty_test() ->
+        E = enumerable:empty(),
+        ?assertEqual([], enumerable:to_list(E)).
