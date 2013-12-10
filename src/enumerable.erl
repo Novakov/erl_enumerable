@@ -1,6 +1,6 @@
 -module(enumerable).
 
--export([start/2, current/1, next/1, yield/1, to_list/1, take/2, where/2, range/3, select_many/2, count/1, empty/0]).
+-export([start/2, current/1, next/1, yield/1, to_list/1, take/2, where/2, range/3, select_many/2, count/1, empty/0, from_list/1]).
 
 -callback enumerate(Args :: tuple()) -> none().
 
@@ -85,3 +85,6 @@ count(E) ->
 
 empty() ->
         empty_enumerable:start().
+
+from_list(List) ->
+        list_enumerable:start(List).

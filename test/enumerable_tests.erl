@@ -63,3 +63,8 @@ count_test() ->
 empty_test() ->
         E = enumerable:empty(),
         ?assertEqual([], enumerable:to_list(E)).
+
+from_list_test() ->
+        L = [1,2,3,4],
+        E = enumerable:from_list(L),
+        ?assertEqual(L, enumerable:to_list(E)).

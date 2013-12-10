@@ -5,5 +5,6 @@
               {applications,[kernel,stdlib]},
               {mod,{enumerable,[]}},
               {env,[]},
-              {modules,[enumerable,range_enumerable,static,take_enumerable,
+              {modules,[empty_enumerable,enumerable,range_enumerable,
+                        select_many_enumerable,static,take_enumerable,
                         where_enumerable]}]}.
